@@ -1,7 +1,15 @@
-const app = require('./app');
+const express = require('express');
+const path = require('path');
 
-const port = 8081;
+const app = express();
+const PORT = 8080;
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+// Serve index.html when accessing "/"
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`App listening on http://localhost:${PORT}`);
 });

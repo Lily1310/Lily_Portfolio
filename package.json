@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "app": "^0.1.0",
     "express": "^4.21.2",
     "json": "^11.0.0",
     "path": "^0.12.7"
